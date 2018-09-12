@@ -31,3 +31,8 @@ Example Session
   And the day? 11
   Eric, you are a fall baby of the stone age.
 """
+
+name = input("Hello, what is your name? ")
+month = input("Hey " + name + ", what's the name of the month you were born in? ")
+year = input("And what year were you born in, " + name +"? ")
+day = input("And the day? ")
