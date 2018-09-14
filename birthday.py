@@ -1,7 +1,7 @@
 """
 birthday.py
-Author: <your name here>
-Credit: <list sources used, if any>
+Author: Pierre Mayo
+Credit: 
 Assignment:
 
 Your program will ask the user the following questions, in this order:
@@ -37,7 +37,29 @@ from calendar import month_name
 todaymonth = datetime.today().month
 todaydate = datetime.today().day
 
+month = month_name[todaymonth]
+
 name = input("Hello, what is your name? ")
-month_name = input("Hey " + name + ", what's the name of the month you were born in? ")
-year = input("And what year were you born in, " + name +"? ")
-day = input("And the day? ")
+month_input = input("Hey " + name + ", what's the name of the month you were born in? ")
+year = int(input("And what year were you born in, " + name +"? "))
+day = int(input("And the day? "))
+
+if month_input == "December" or "Jaunary" or "Febuary":
+    timeofyear = "winter"
+elif month_input == "March" or "April" or "May":
+    timeofyear = "spring"
+elif month_input == "June" or "July" or "August":
+    timeofyear = "summer"
+elif month_input == "September" or "October" or "November":
+    timeofyear = "fall"
+
+if year < 1980:
+    year1 = "stone age"
+elif 1980 <= year <= 1989:
+    year1 = "eighties"
+elif 1990 <= year <= 1999:
+    year1 = "nineties"
+else: year1 = "two thousands"
+
+print(timeofyear)
+print(year1)
