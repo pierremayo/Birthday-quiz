@@ -44,7 +44,7 @@ name = input("Hello, what is your name? ")
 month_input = input("Hey " + name + ", what's the name of the month you were born in? ")
 year = int(input("And what year were you born in, " + name +"? "))
 day = int(input("And the day? "))
-
+"""
 if month_input == "January":
     month1 = 1
 elif month_input == "February":
@@ -77,6 +77,15 @@ elif month1 == 3 or 4 or 5:
 elif month1 == 6 or 7 or 8:
     timeofyear = "summer"
 elif month1 == 9 or 10 or 11:
+    timeofyear = "fall"
+"""
+if month1 == "December" or "January" or "February":
+    timeofyear = "winter"
+elif month1 == "March" or "April" or "May":
+    timeofyear = "spring"
+elif month1 == "June" or "July" or "August":
+    timeofyear = "summer"
+elif month1 == "September" or "October" or "November":
     timeofyear = "fall"
 
 if year < 1980:
