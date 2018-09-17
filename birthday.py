@@ -35,6 +35,7 @@ Example Session
 from datetime import datetime
 from calendar import month_name
 todaymonth = datetime.today().month
+
 todaydate = datetime.today().day
 
 month = month_name[todaymonth]
@@ -44,13 +45,38 @@ month_input = input("Hey " + name + ", what's the name of the month you were bor
 year = int(input("And what year were you born in, " + name +"? "))
 day = int(input("And the day? "))
 
-if month_input == "December" or "Jaunary" or "Febuary":
+if month_input == "January":
+    month1 = 1
+elif month_input == "February":
+    month1 = 2
+elif month_input == "March":
+    month1 = 3
+elif month_input == "April":
+    month1 = 4
+elif month_input == "May":
+    month1 = 5
+elif month_input == "June":
+    month1 = 6
+elif month_input == "July":
+    month1 = 7
+elif month_input == "August":
+    month1 = 8
+elif month_input == "September":
+    month1 = 9
+elif month_input == "October":
+    month1 = 10
+elif month_input == "November":
+    month1 = 11
+elif month_input == "December":
+    month1 = 12
+
+if month1 == 12 or 1 or 2:
     timeofyear = "winter"
-elif month_input == "March" or "April" or "May":
+elif month1 == 3 or 4 or 5:
     timeofyear = "spring"
-elif month_input == "June" or "July" or "August":
+elif month1 == 6 or 7 or 8:
     timeofyear = "summer"
-elif month_input == "September" or "October" or "November":
+elif month1 == 9 or 10 or 11:
     timeofyear = "fall"
 
 if year < 1980:
@@ -61,5 +87,8 @@ elif 1990 <= year <= 1999:
     year1 = "nineties"
 else: year1 = "two thousands"
 
-print(timeofyear)
-print(year1)
+if month_input == "October" and day == 31:
+    print("You were born on Halloween!")
+elif month_input == month and day == todaydate:
+    print("Happy birthday!")
+else: print(name + ", you are a " + timeofyear + " baby of the " + year1 + "! ")
